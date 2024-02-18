@@ -13,7 +13,7 @@ int main(){
             cnt+=a[i];
             a[i]=0;
         }else{
-            cnt=0;
+            cnt=a[i];
             ret++;
         }
     }
