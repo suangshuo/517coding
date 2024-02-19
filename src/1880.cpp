@@ -1,19 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
-int a[10*10*10*10*10+100];
 int main(){
-    int n,m;
+    int n,m,x;
     cin>>n>>m;
-    for(int i=0;i<n;i++){
-        cin>>a[i];
-    }
-    int cnt=0,ret=0;
-    for(int i=0;i<n;i++){
-        if(cnt+a[i]<=m){
-            cnt+=a[i];
-            a[i]=0;
+    int cnt=0,ret=1;
+    for(int i=1;i<=n;i++){
+        cin>>x;
+        if(cnt+x<=m){
+            cnt+=x;
         }else{
-            cnt=a[i];
+            cnt=x;
             ret++;
         }
     }
